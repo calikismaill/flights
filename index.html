@@ -2,53 +2,31 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Google Flights</title>
+  <title>Flights</title>
 
-  <!-- iOS Fullscreen -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-  <!-- PWA manifest -->
-  <link rel="manifest" href="manifest.json">
-
-  <!-- App Icon -->
-  <link rel="apple-touch-icon" href="icon.png">
-
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
       background: #000;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: system-ui, -apple-system, sans-serif;
-      -webkit-user-select: none;
-      user-select: none;
     }
-
-    button {
-      padding: 20px 35px;
-      font-size: 22px;
-      border-radius: 14px;
+    iframe {
       border: none;
-      background: #007aff;
-      color: white;
-      cursor: pointer;
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
 <body>
 
-<button onclick="openFlights()">Google Flights</button>
-
-<script>
-function openFlights() {
-  // SENİN WORKER URL’in
-window.location.href = "https://flights.calikismail.info/flights";
-}
-</script>
+<iframe src="https://flights.calikismail.info/flights"></iframe>
 
 </body>
 </html>
