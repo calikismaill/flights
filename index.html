@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Google Flights</title>
+
+  <!-- iOS Fullscreen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- App Icon -->
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: system-ui, -apple-system, sans-serif;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    button {
+      padding: 20px 35px;
+      font-size: 22px;
+      border-radius: 14px;
+      border: none;
+      background: #007aff;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="openFlights()">Google Flights</button>
+
+<script>
+function openFlights() {
+  // SENİN WORKER URL’in
+  window.location.href = "https://googleflights.calikismail55-fb0.workers.dev/flights";
+}
+</script>
+
+</body>
+</html>
